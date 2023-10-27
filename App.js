@@ -1,64 +1,42 @@
-import React,{Component} from 'react';
-import './App.css';
+// import React, {useState} from 'react';
+// import './App.css';
+// import Students from './Component/Students';
 
-class App extends Component{
-  constructor(){
-    super();
-    this.state = {
-      // data:"ali",
-      data:1,
-
-    }
-  }
-apple() {
-    // alert("apple");
-    this.setState({data:this.state.data+1});
-}
-
-  render(){
-    return(
-      <div className="App">
-        <h1>{this.state.data}</h1>
-        <button onClick={()=>this.apple()}>Update Data</button>
-      </div>
-    );
-  }
-}
-// function App() {
-//   return (
+// function App(){
+//   const [name,setName]=useState("Ahmed")
+//   return(
 //     <div className="App">
-  
+//       <h1>Props</h1>
+//       <Students name={"Ali"} email="shafaullah45@gmail.com" />
+//       <button onClick={()=>{setName("Ali")}}>Update Name</button>
 //     </div>
 //   );
 // }
+// export default  App;
+
+
+import './App.css';
+import React, {useState} from 'react'
+
+function App(){
+  const [data,setData]=useState(null)
+  const [print,setPrint]=useState(false)
+  function getData(val){
+    console.warn(val.target.value);
+    setData(val.target.value)
+    setPrint(false)
+  }
+  return(
+    <div className='App'>
+    {
+      print?
+      <h1>{data}</h1>
+      :null
+    }
+        
+        <input type="text" onChange={getData}/>
+        <button onClick={()=>setPrint(true)}>Print Data</button>
+    </div>
+  );
+}
 export default App;
-
-
-// import {useState} from 'react';
-// import User from './Component/User';
-// import Class from './Component/Class';
-// import JSX from './Component/JSX';
-  // let data = "Ali";  
-  // function btn(){
-  //   data = "Ahmed";
-  //   alert(data);
-  // }
-// let data = "Ali";
-//   function udpateData(){
-//     data = "Ahmed";
-//     alert(data);
-//   }
-//   console.warn("____________")
-// const [data,setData] = useState(0);
-// function updateData(){
-//   setData(data+1);
-// }
-// console.warn("____________");
-// {/* <h1>{data}</h1> */}
-
-//       {/* <button onClick = { () => btn() }>Click me</button> */}
-//       {/* <button  onClick = {udpateData}>Update Data</button> */}
-//       {/* <button onClick ={updateData} >Update Data</button> */}
-
- 
-
