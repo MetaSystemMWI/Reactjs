@@ -62,31 +62,44 @@
 
 
 
+// import './App.css';
+// import {useState} from 'react'
+// function App(){
+//   const [name, setName]=useState("");
+//   const [tnc, setTnc]=useState(false);
+//   const [instrest, setIntrest]=useState("");
+//   function getFormData(e){
+//     console.warn(name,tnc,instrest);
+//     e.preventDefault();
+//   }
+//   return(
+//     <div className='App'>
+//       <h1>Handling Form</h1>
+//       <form onSubmit={getFormData}>
+//         <input type="text" placeholder="Enter Name" value={name} onChange={(e)=>setName(e.target.value)} /><br /><br />
+//         <select onChange={(e)=>setIntrest(e.target.value)}>
+//           <option value="">Selects Options</option>
+//           <option value="">DEO</option>
+//           <option value="">CEO</option>
+//         </select><br /><br />
+//         <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)} /><span>Accept Terms and Conditions</span><br /><br />
+//         <button type="submit">Submit</button>
+//         <button>Clear</button>
+//       </form>
+      
+//     </div>
+//   );
+// }
+// export default App;
+
+
 import './App.css';
-import {useState} from 'react'
+import Profile from './Component/Profile';
 function App(){
-  const [name, setName]=useState("");
-  const [tnc, setTnc]=useState(false);
-  const [instrest, setIntrest]=useState("");
-  function getFormData(e){
-    console.warn(name,tnc,instrest);
-    e.preventDefault();
-  }
   return(
     <div className='App'>
-      <h1>Handling Form</h1>
-      <form onSubmit={getFormData}>
-        <input type="text" placeholder="Enter Name" value={name} onChange={(e)=>setName(e.target.value)} /><br /><br />
-        <select onChange={(e)=>setIntrest(e.target.value)}>
-          <option value="">Selects Options</option>
-          <option value="">DEO</option>
-          <option value="">CEO</option>
-        </select><br /><br />
-        <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)} /><span>Accept Terms and Conditions</span><br /><br />
-        <button type="submit">Submit</button>
-        <button>Clear</button>
-      </form>
-      
+    <h1>Conditional Operators</h1>
+    <Profile />
     </div>
   );
 }
